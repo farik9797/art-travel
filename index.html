@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Afsun hotels group: отели в Самарканде</title>
+<meta name="description" content="Четыре отеля Afsun в Самарканде: уютные номера, вкусный завтрак, охраняемая парковка и онлайн-бронирование с бесплатной отменой до 18:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400&family=Spectral:wght@300;400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__pill">
+    <a class="wordmark" href="#top" aria-label="Afsun hotels group, на главную">Afsun</a>
+    <ul class="nav__links">
+      <li><a href="#hotels">Отели</a></li>
+      <li><a href="#breakfast">Завтрак</a></li>
+      <li><a href="#terms">Условия</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <div class="lang" aria-label="Язык сайта">
+      <a href="#top" lang="uz">Oʻzbekcha</a>
+      <a href="#top" aria-current="true">Русский</a>
+      <a href="#top" lang="en">English</a>
+    </div>
+    <a class="btn btn--small" href="#booking">Забронировать</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div class="hero__photo" data-slot="hero" data-alt="Лучший номер одного из отелей при дневном свете, кровать и окно">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Canopy_bed_of_Khan_Pool_Suite_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/1920px-Canopy_bed_of_Khan_Pool_Suite_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Canopy_bed_of_Khan_Pool_Suite_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/1280px-Canopy_bed_of_Khan_Pool_Suite_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg 1280w, https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Canopy_bed_of_Khan_Pool_Suite_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/1920px-Canopy_bed_of_Khan_Pool_Suite_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg 1920w" sizes="100vw" width="6390" height="4260" alt="Номер с кроватью у высоких дверей" fetchpriority="high">
+      </div>
+      <div class="hero__text">
+        <h1 id="hero-title">Четыре отеля в&nbsp;Самарканде</h1>
+        <p class="lead">Уютные номера, вкусный завтрак и охраняемая парковка по доступной цене.</p>
+      </div>
+      <div class="hero__card">
+        <form class="booking stock" id="booking" data-endpoint="" novalidate aria-labelledby="booking-house">
+          <p class="booking__house" id="booking-house">Бронирование номера</p>
+          <fieldset>
+            <legend class="visually-hidden">Даты и гости</legend>
+            <div class="field field--wide">
+              <label for="b-hotel">Отель</label>
+              <select id="b-hotel" name="hotel">
+                <option value="all">Все отели</option>
+                <option value="1">Отель 1</option>
+                <option value="2">Отель 2</option>
+                <option value="3">Отель 3</option>
+                <option value="4">Отель 4</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="b-in">Заезд</label>
+              <input id="b-in" name="checkin" type="date" required>
+            </div>
+            <div class="field">
+              <label for="b-out">Выезд</label>
+              <input id="b-out" name="checkout" type="date" required>
+            </div>
+            <div class="field field--wide">
+              <label for="b-guests">Гости</label>
+              <select id="b-guests" name="guests">
+                <option>1 взрослый</option>
+                <option selected>2 взрослых</option>
+                <option>2 взрослых и ребёнок</option>
+                <option>3 взрослых</option>
+              </select>
+            </div>
+          </fieldset>
+          <button class="btn" type="submit">Найти номер</button>
+          <p class="booking__terms">Бесплатная отмена до 18:00 дня заезда.</p>
+          <p class="booking__help" id="booking-help" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="hotels" aria-labelledby="hotels-title">
+    <div class="container grid12">
+      <div class="hotels__side">
+        <div class="head">
+          <h2 id="hotels-title">Выберите свой отель</h2>
+          <p class="lead">Все четыре в Самарканде, бронь и оплата в одном месте.</p>
+        </div>
+        <div class="rail" role="tablist" aria-label="Отели">
+          <button class="strip" type="button" role="tab" id="tab-1" aria-controls="hotel-1" aria-selected="true" style="--stain: var(--stain-1); --i: 0"><span>Отель 1</span></button>
+          <button class="strip" type="button" role="tab" id="tab-2" aria-controls="hotel-2" aria-selected="false" tabindex="-1" style="--stain: var(--stain-2); --i: 1"><span>Отель 2</span></button>
+          <button class="strip" type="button" role="tab" id="tab-3" aria-controls="hotel-3" aria-selected="false" tabindex="-1" style="--stain: var(--stain-3); --i: 2"><span>Отель 3</span></button>
+          <button class="strip" type="button" role="tab" id="tab-4" aria-controls="hotel-4" aria-selected="false" tabindex="-1" style="--stain: var(--stain-4); --i: 3"><span>Отель 4</span></button>
+        </div>
+      </div>
+
+      <div class="hotels__panel" role="tabpanel" id="hotel-1" aria-labelledby="tab-1">
+        <div class="hotels__photo" data-slot="hotel-1" data-alt="Отель 1: фасад или лобби">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg/1280px-Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg/960px-Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg/1280px-Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg 1280w" sizes="(max-width: 60rem) 100vw, 55vw" width="5859" height="3906" alt="" loading="lazy">
+        </div>
+        <div class="hotels__label">
+          <div>
+            <h3>Отель 1</h3>
+            <p>Самарканд, <span class="fill" data-fill="address">адрес уточняется</span></p>
+          </div>
+          <div class="hotels__actions">
+            <a class="link" href="#booking" data-hotel="1">Номера и цены</a>
+          </div>
+        </div>
+      </div>
+      <div class="hotels__panel" role="tabpanel" id="hotel-2" aria-labelledby="tab-2" hidden>
+        <div class="hotels__photo" data-slot="hotel-2" data-alt="Отель 2: фасад или лобби">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Glass_door_of_the_library_at_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/1280px-Glass_door_of_the_library_at_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg" width="6048" height="4032" alt="" loading="lazy">
+        </div>
+        <div class="hotels__label">
+          <div><h3>Отель 2</h3><p>Самарканд</p></div>
+          <div class="hotels__actions"><a class="link" href="#booking" data-hotel="2">Номера и цены</a></div>
+        </div>
+      </div>
+      <div class="hotels__panel" role="tabpanel" id="hotel-3" aria-labelledby="tab-3" hidden>
+        <div class="hotels__photo" data-slot="hotel-3" data-alt="Отель 3: фасад или лобби">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Croix_villa_cavrois_chambre_parents_fused.jpg/1280px-Croix_villa_cavrois_chambre_parents_fused.jpg" width="4531" height="3050" alt="" loading="lazy">
+        </div>
+        <div class="hotels__label">
+          <div><h3>Отель 3</h3><p>Самарканд</p></div>
+          <div class="hotels__actions"><a class="link" href="#booking" data-hotel="3">Номера и цены</a></div>
+        </div>
+      </div>
+      <div class="hotels__panel" role="tabpanel" id="hotel-4" aria-labelledby="tab-4" hidden>
+        <div class="hotels__photo" data-slot="hotel-4" data-alt="Отель 4: фасад или лобби">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/342_East_Church_Street_Frederick_MD1.jpg/1280px-342_East_Church_Street_Frederick_MD1.jpg" width="5874" height="5807" alt="" loading="lazy">
+        </div>
+        <div class="hotels__label">
+          <div><h3>Отель 4</h3><p>Самарканд</p></div>
+          <div class="hotels__actions"><a class="link" href="#booking" data-hotel="4">Номера и цены</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--l" aria-labelledby="why-title">
+    <div class="container grid12">
+      <div class="why__head head">
+        <h2 id="why-title">Спокойно, как дома</h2>
+        <p class="lead">Для нас сервис на первом месте.</p>
+      </div>
+      <dl class="rows">
+        <div><dt>Уютные номера</dt><dd>Всё, что нужно для отдыха, уже есть в номере.</dd></div>
+        <div><dt>Доступные цены</dt><dd>Стоимость за все ночи видна до оплаты.</dd></div>
+        <div><dt>Удобное расположение</dt><dd>Из каждого отеля легко добраться до главных мест города.</dd></div>
+        <div><dt>Охраняемая парковка</dt><dd>Машина гостей стоит на безопасной стоянке.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="breakfast" id="breakfast" aria-labelledby="breakfast-title">
+    <div class="container grid12">
+      <div class="breakfast__photo" data-slot="breakfast" data-alt="Завтрак в одном из отелей: накрытый стол, крупно">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Breakfast_in_%C3%8Ele_d%27Orl%C3%A9ans_072.jpg/1280px-Breakfast_in_%C3%8Ele_d%27Orl%C3%A9ans_072.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Breakfast_in_%C3%8Ele_d%27Orl%C3%A9ans_072.jpg/960px-Breakfast_in_%C3%8Ele_d%27Orl%C3%A9ans_072.jpg 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Breakfast_in_%C3%8Ele_d%27Orl%C3%A9ans_072.jpg/1280px-Breakfast_in_%C3%8Ele_d%27Orl%C3%A9ans_072.jpg 1280w" sizes="(max-width: 60rem) 100vw, 66vw" width="5109" height="5788" alt="Завтрак на столе у окна" loading="lazy">
+      </div>
+      <div class="breakfast__text">
+        <h2 id="breakfast-title">Завтрак, ради которого стоит проснуться</h2>
+        <p class="dropcap">Вкусный завтрак мы считаем своим главным отличием. Его можно выбрать вместе с номером при бронировании.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="terms" aria-labelledby="terms-title">
+    <div class="container grid12">
+      <div class="terms__head head">
+        <h2 id="terms-title">Условия проживания</h2>
+      </div>
+      <table class="terms__table">
+        <tbody>
+          <tr><th scope="row">Отмена брони</th><td>Бесплатно до 18:00 дня заезда.</td></tr>
+          <tr><th scope="row">Оплата</th><td>Онлайн картой при бронировании.</td></tr>
+          <tr><th scope="row">Заезд и выезд</th><td><span class="fill" data-fill="checkin">время уточняется</span></td></tr>
+          <tr><th scope="row">Парковка</th><td>Охраняемая, для гостей отеля.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="close" aria-labelledby="close-title">
+    <div class="container grid12">
+      <div class="close__photo" data-slot="close" data-alt="Атмосферный кадр отеля: столовая, двор или вид из окна">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/White_tablecloth_on_restaurant_table_at_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/1280px-White_tablecloth_on_restaurant_table_at_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/White_tablecloth_on_restaurant_table_at_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/960px-White_tablecloth_on_restaurant_table_at_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/White_tablecloth_on_restaurant_table_at_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/1280px-White_tablecloth_on_restaurant_table_at_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg 1280w" sizes="(max-width: 60rem) 100vw, 50vw" width="4189" height="4189" alt="Стол под арочным окном" loading="lazy">
+      </div>
+      <div class="close__text">
+        <h2 id="close-title">Ваш номер в Самарканде</h2>
+        <p class="lead">Выберите даты, отель и оплатите онлайн за пару минут.</p>
+        <a class="btn" href="#booking">Выбрать даты</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="contacts">
+  <div class="container footer__grid">
+    <div class="footer__colophon">
+      <a class="wordmark" href="#top" aria-label="Afsun hotels group, на главную">Afsun</a>
+      <p>Afsun hotels group. Четыре средства размещения в Самарканде, работаем с 2025 года.</p>
+    </div>
+    <ul class="footer__links">
+      <li><a href="#hotels">Отели</a></li>
+      <li><a href="#terms">Условия бронирования и отмены</a></li>
+      <li><a href="#breakfast">Завтрак</a></li>
+      <li><a href="#terms">Публичная оферта</a></li>
+      <li><a href="#booking">Бронирование</a></li>
+      <li><a href="#terms">Политика конфиденциальности</a></li>
+    </ul>
+    <p class="footer__credits" data-credits>Фотографии: <a href="https://commons.wikimedia.org/wiki/File:Canopy_bed_of_Khan_Pool_Suite_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg">Basile Morin</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg">Basile Morin</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Glass_door_of_the_library_at_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg">Basile Morin</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Croix_villa_cavrois_chambre_parents_fused.jpg">Velvet</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:342_East_Church_Street_Frederick_MD1.jpg">Acroterion</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Breakfast_in_%C3%8Ele_d%27Orl%C3%A9ans_072.jpg">Wilfredor</a> (CC0), <a href="https://commons.wikimedia.org/wiki/File:White_tablecloth_on_restaurant_table_at_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg">Basile Morin</a> (CC BY-SA 4.0), Wikimedia Commons.</p>
+  </div>
+</footer>
+
+<script>
+// Hotels: strips as tabs
+(() => {
+  const tabs = [...document.querySelectorAll('.strip[role="tab"]')];
+  const select = (tab, focus) => {
+    tabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus({ preventScroll: true });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', (e) => {
+      const d = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      select(tabs[(i + d + tabs.length) % tabs.length], true);
+    });
+  });
+  // "Номера и цены" preselects the hotel in the booking card
+  document.querySelectorAll('[data-hotel]').forEach((a) => a.addEventListener('click', () => {
+    document.getElementById('b-hotel').value = a.dataset.hotel;
+  }));
+})();
+
+// Booking: no endpoint yet, so nothing is sent
+(() => {
+  const form = document.getElementById('booking');
+  const help = document.getElementById('booking-help');
+  const inD = document.getElementById('b-in'), outD = document.getElementById('b-out');
+  const today = new Date().toISOString().slice(0, 10);
+  inD.min = today; outD.min = today;
+  inD.addEventListener('change', () => { outD.min = inD.value || today; });
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    [inD, outD].forEach((f) => f.removeAttribute('aria-invalid'));
+    const bad = [inD, outD].find((f) => !f.value);
+    if (bad) { bad.setAttribute('aria-invalid', ''); bad.setAttribute('aria-describedby', help.id); help.textContent = 'Выберите даты заезда и выезда.'; bad.focus(); return; }
+    if (outD.value <= inD.value) { outD.setAttribute('aria-invalid', ''); help.textContent = 'Дата выезда должна быть позже даты заезда.'; outD.focus(); return; }
+    if (!form.dataset.endpoint) { help.textContent = 'Поиск пока не подключён: это макет, данные никуда не отправлены.'; return; }
+  });
+})();
+</script>
+<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>
