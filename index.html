@@ -79,8 +79,8 @@ h2 { font-size: clamp(26px, 2.6vw, 34px); }
 .hero > .wrap { width: 100%; }
 .hero h1 { font-size: clamp(34px, 4.1vw, 54px); max-width: 15ch; }
 .hero .lead { font-size: 16px; margin-bottom: 0; color: var(--ink); max-width: 30ch; }
-.hero__bar { display: flex; align-items: center; gap: 22px; margin-top: 60px; }
-.search { flex: 1; display: grid; grid-template-columns: 1.1fr 1fr 1fr 1.1fr auto; align-items: center; gap: 4px; min-height: 76px; padding: 10px 10px 10px 18px; background: #fff; border-radius: var(--r); box-shadow: var(--shadow); }
+.hero__bar { display: flex; align-items: center; gap: 4px; margin-top: 60px; padding-right: 26px; background: #fff; border-radius: var(--r); box-shadow: var(--shadow); }
+.search { flex: 1; display: grid; grid-template-columns: 1.1fr 1fr 1fr 1.1fr auto; align-items: center; gap: 4px; min-height: 76px; padding: 10px 10px 10px 18px; }
 .sf { position: relative; display: flex; align-items: center; gap: 12px; padding: 8px 14px; border-radius: 12px; min-width: 0; }
 .sf:hover { background: var(--cream); }
 .sf .lucide { width: 22px; height: 22px; color: var(--ink-2); }
@@ -89,8 +89,8 @@ h2 { font-size: clamp(26px, 2.6vw, 34px); }
 .sf input:focus, .sf select:focus { outline: none; }
 .sf:focus-within { outline: 2px solid var(--gold); outline-offset: -2px; }
 .sf--sel select { padding-right: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%231f2a2e' fill='none' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right center; }
-.search .btn--fill { height: 54px; padding: 0 42px; border-radius: 12px; font-size: 14.5px; }
-.badge { display: flex; align-items: center; gap: 12px; max-width: 220px; font-size: 13px; font-weight: 600; line-height: 1.35; color: var(--ink); }
+.search .btn--fill { height: 54px; padding: 0 42px; border-radius: 12px; font-size: 14.5px; justify-content: center; }
+.badge { display: flex; align-items: center; gap: 12px; flex: 0 0 auto; max-width: 230px; padding-left: 22px; border-left: 1px solid var(--line); font-size: 13px; font-weight: 600; line-height: 1.35; color: var(--ink); }
 .badge .lucide { width: 34px; height: 34px; color: var(--gold); fill: rgba(200,150,74,.18); }
 .search__note { margin: 10px 0 0; font-size: 13px; min-height: 1.4em; color: var(--ink-2); }
 
@@ -260,7 +260,8 @@ html.lenis, html.lenis body { height: auto; }
   .sf input, .sf select { font-size: 15px; }
   .sf .lucide { width: 26px; height: 26px; }
   .search .btn--fill { height: 64px; padding: 0 60px; font-size: 16px; }
-  .badge { font-size: 14.5px; max-width: 260px; }
+  .badge { font-size: 14.5px; max-width: 270px; padding-left: 28px; }
+  .hero__bar { padding-right: 32px; }
   .badge .lucide { width: 40px; height: 40px; }
   .btn { height: 46px; padding: 0 22px; font-size: 14.5px; }
   .sec { padding: 44px 0; }
@@ -306,7 +307,8 @@ html.lenis, html.lenis body { height: auto; }
 }
 @media (max-width: 1000px) {
   .split, .loc, .rev, .faq .split { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-  .hero__bar { flex-direction: column; align-items: stretch; }
+  .hero__bar { flex-direction: column; align-items: stretch; padding: 0 0 16px; }
+  .badge { max-width: none; margin: 0 18px; padding: 14px 0 0; border-left: 0; border-top: 1px solid var(--line); }
   .search { grid-template-columns: 1fr 1fr; }
   .search .btn--fill { grid-column: 1 / -1; }
   .feats { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 18px; margin-right: 0; }
@@ -657,11 +659,11 @@ if (!reduceMotion && window.gsap && window.ScrollTrigger && window.Lenis) {
   drawIcons.forEach(prepDraw);
 
   // Hero intro
-  gsap.timeline({ defaults: { ease: 'power3.out' } })
+  gsap.timeline({ defaults: { ease: 'power3.out', clearProps: 'transform,opacity' } })
     .from('.hdr .logo, .hdr .menu li, .hdr__right > *', { y: -18, opacity: 0, duration: .7, stagger: .05 })
     .from('.hero h1', { y: 46, opacity: 0, duration: 1.1 }, '-=.45')
     .from('.hero .lead', { y: 26, opacity: 0, duration: .9 }, '-=.75')
-    .from('.search', { y: 50, opacity: 0, duration: 1 }, '-=.6')
+    .from('.hero__bar', { y: 50, opacity: 0, duration: 1 }, '-=.6')
     .from('.search .sf, .search .btn', { y: 16, opacity: 0, duration: .6, stagger: .07 }, '-=.65')
     .add(() => document.querySelectorAll('.sf > svg').forEach((s, i) => draw(s, i * .08)), '-=.5')
     .from('.badge', { x: 24, opacity: 0, duration: .7 }, '-=.6')
@@ -673,7 +675,7 @@ if (!reduceMotion && window.gsap && window.ScrollTrigger && window.Lenis) {
 
   // Section heads
   gsap.utils.toArray('.split > .rv:first-child, .loc > .rv:first-child, .rev > .rv:first-child').forEach((el) => {
-    gsap.from(el.children, { y: 32, opacity: 0, duration: .95, stagger: .09, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 85%' } });
+    gsap.from(el.children, { y: 32, opacity: 0, duration: .95, stagger: .09, ease: 'power3.out', clearProps: 'transform,opacity', scrollTrigger: { trigger: el, start: 'top 85%' } });
   });
 
   // Cards and lists rise in batches
@@ -681,7 +683,7 @@ if (!reduceMotion && window.gsap && window.ScrollTrigger && window.Lenis) {
   gsap.set(items, { y: 44, opacity: 0 });
   ScrollTrigger.batch(items, {
     start: 'top 90%', end: 'max', once: true,
-    onEnter: (b) => gsap.to(b, { y: 0, opacity: 1, duration: .9, stagger: .09, ease: 'power3.out', overwrite: true,
+    onEnter: (b) => gsap.to(b, { y: 0, opacity: 1, duration: .9, stagger: .09, ease: 'power3.out', overwrite: true, clearProps: 'transform',
       onStart: () => b.forEach((el, i) => { const s = el.querySelector('.feat__ic svg, :scope > svg'); if (s) draw(s, .25 + i * .09); }) }),
   });
 
@@ -691,7 +693,7 @@ if (!reduceMotion && window.gsap && window.ScrollTrigger && window.Lenis) {
   // Breakfast banner: unfold + parallax
   gsap.from('.bf', { clipPath: 'inset(0 12% 0 12% round 20px)', opacity: 0, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: '.bf', start: 'top 85%' } });
   gsap.fromTo('.bf__photo img', { yPercent: -6, scale: 1.12 }, { yPercent: 6, scale: 1.12, ease: 'none', scrollTrigger: { trigger: '.bf', start: 'top bottom', end: 'bottom top', scrub: true } });
-  gsap.from('.bf__text > :not(.bf__tiles)', { x: 30, opacity: 0, duration: .9, stagger: .08, ease: 'power3.out', scrollTrigger: { trigger: '.bf', start: 'top 75%' } });
+  gsap.from('.bf__text > :not(.bf__tiles)', { x: 30, opacity: 0, duration: .9, stagger: .08, ease: 'power3.out', clearProps: 'transform,opacity', scrollTrigger: { trigger: '.bf', start: 'top 75%' } });
 
   // Decorative tiles drift
   gsap.utils.toArray('.why__deco img, .svc__deco img, .faq__deco img, .terms__img img, .bf__tiles img').forEach((img) => {
@@ -704,10 +706,10 @@ if (!reduceMotion && window.gsap && window.ScrollTrigger && window.Lenis) {
   } } });
 
   // Terms band
-  gsap.from('.terms', { y: 50, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.terms', start: 'top 88%', onEnter: () => draw(document.querySelector('.terms__ic svg'), .3) } });
+  gsap.from('.terms', { y: 50, opacity: 0, duration: 1, ease: 'power3.out', clearProps: 'transform,opacity', scrollTrigger: { trigger: '.terms', start: 'top 88%', onEnter: () => draw(document.querySelector('.terms__ic svg'), .3) } });
 
   // Footer
-  gsap.from('.foot__top > *', { y: 24, opacity: 0, duration: .8, stagger: .08, ease: 'power3.out', scrollTrigger: { trigger: '.foot', start: 'top 92%' } });
+  gsap.from('.foot__top > *', { y: 24, opacity: 0, duration: .8, stagger: .08, ease: 'power3.out', clearProps: 'transform,opacity', scrollTrigger: { trigger: '.foot', start: 'top 92%' } });
 
   addEventListener('load', () => ScrollTrigger.refresh());
   // Safety net: never leave content hidden above the bottom of the screen
