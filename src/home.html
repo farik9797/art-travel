@@ -1,0 +1,171 @@
+<section class="hero" aria-labelledby="hero-title">
+    <div class="hero__media ph">
+      <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="img/hero.jpg">
+        <source src="video/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="wrap">
+      <h1 id="hero-title">Afsun Hotels Group в&nbsp;самом сердце Самарканда</h1>
+      <p class="lead">Уютные номера, вкусный завтрак и&nbsp;сервис, который заботится о&nbsp;вас</p>
+    </div>
+    <div class="wrap">
+      <div class="hero__bar">
+        <form class="search" id="search" novalidate>
+          <div class="sf sf--sel"><i data-lucide="building-2"></i><div><label for="s-hotel" class="visually-hidden">Отель</label><select id="s-hotel" name="hotel" aria-label="Отель"><option value="">Все отели</option></select></div></div>
+          <div class="sf"><i data-lucide="calendar-days"></i><div><label for="s-in">Заезд</label><input id="s-in" name="checkin" type="date" required></div></div>
+          <div class="sf"><i data-lucide="calendar-days"></i><div><label for="s-out">Выезд</label><input id="s-out" name="checkout" type="date" required></div></div>
+          <div class="sf sf--sel"><i data-lucide="users"></i><div><label for="s-guests">Гости</label><select id="s-guests" name="guests"><option>1 взрослый</option><option selected>2 взрослых</option><option>2 взрослых, 1 ребёнок</option><option>2 взрослых, 2 детей</option><option>3 взрослых</option></select></div></div>
+          <button class="btn btn--fill" type="submit">Найти</button>
+        </form>
+        <div class="badge"><i data-lucide="shield-check"></i>Бесплатная отмена до 18:00 дня заезда</div>
+      </div>
+      <p class="search__note" id="searchNote" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="sec" id="hotels" aria-labelledby="hotels-title">
+    <div class="wrap split">
+      <div class="rv">
+        <p class="kicker">Наши отели</p>
+        <h2 id="hotels-title">4 отеля в&nbsp;Самарканде</h2>
+        <p class="lead">Выберите идеальный отель для вашего пребывания</p>
+        <a class="btn btn--fill" href="#location">Все отели <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="cards4" id="hotelCards"></div>
+    </div>
+  </section>
+
+  <section class="why" aria-labelledby="why-title">
+    <div class="why__deco ph"><img src="img/arch.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+    <div class="wrap split">
+      <div class="rv">
+        <p class="kicker">Почему выбирают<br>Afsun Hotels Group</p>
+        <h2 id="why-title">Ваш комфорт — наш приоритет</h2>
+        <div style="height:18px" aria-hidden="true"></div>
+        <a class="btn" href="#services">Узнать больше <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="feats rv">
+        <div class="feat"><span class="feat__ic"><i data-lucide="bed-double"></i></span>Уютные<br>номера</div>
+        <div class="feat"><span class="feat__ic"><i data-lucide="coffee"></i></span>Вкусный<br>завтрак</div>
+        <div class="feat"><span class="feat__ic"><i data-lucide="car"></i></span>Охраняемая<br>парковка</div>
+        <div class="feat"><span class="feat__ic"><i data-lucide="wifi"></i></span>Бесплатный<br>Wi-Fi</div>
+        <div class="feat"><span class="feat__ic"><i data-lucide="headset"></i></span>Забота<br>и поддержка</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="rooms" aria-labelledby="rooms-title">
+    <div class="wrap split">
+      <div class="rv">
+        <p class="kicker">Номера</p>
+        <h2 id="rooms-title">Комфортные номера для каждого гостя</h2>
+        <div style="height:18px" aria-hidden="true"></div>
+        <a class="btn" href="#top">Все номера <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="cards4">
+        <a class="rcard rv" href="#top"><div class="ph"><img src="img/room-standard.jpg" alt="Стандартный номер" loading="lazy" onerror="this.remove()"></div><div class="rcard__row"><span class="rcard__name">Стандартные номера</span><span class="rcard__go"><i data-lucide="arrow-right"></i></span></div></a>
+        <a class="rcard rv" href="#top"><div class="ph"><img src="img/room-superior.jpg" alt="Улучшенный номер" loading="lazy" onerror="this.remove()"></div><div class="rcard__row"><span class="rcard__name">Улучшенные номера</span><span class="rcard__go"><i data-lucide="arrow-right"></i></span></div></a>
+        <a class="rcard rv" href="#top"><div class="ph"><img src="img/room-family.jpg" alt="Семейный номер" loading="lazy" onerror="this.remove()"></div><div class="rcard__row"><span class="rcard__name">Семейные номера</span><span class="rcard__go"><i data-lucide="arrow-right"></i></span></div></a>
+        <a class="rcard rv" href="#top"><div class="ph"><img src="img/room-suite.jpg" alt="Люкс" loading="lazy" onerror="this.remove()"></div><div class="rcard__row"><span class="rcard__name">Люкс</span><span class="rcard__go"><i data-lucide="arrow-right"></i></span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="bf-title">
+    <div class="wrap">
+      <div class="bf rv">
+        <div class="bf__photo"><div class="ph"><img src="img/breakfast.jpg" alt="Завтрак в отеле Afsun" loading="lazy" onerror="this.remove()"></div></div>
+        <div class="bf__text">
+          <div class="bf__tiles"><img src="img/arch.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+          <p class="kicker">Вкусный завтрак</p>
+          <h2 id="bf-title">Начните день с удовольствия</h2>
+          <p>Свежие продукты, разнообразное меню и уютная атмосфера</p>
+          <a class="btn btn--white" href="#faq">Узнать больше <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="location" aria-labelledby="loc-title">
+    <div class="wrap loc">
+      <div class="rv">
+        <p class="kicker">Расположение</p>
+        <h2 id="loc-title">Удобное расположение в&nbsp;Самарканде</h2>
+        <p class="lead">Все наши отели находятся в центре города и рядом с главными достопримечательностями</p>
+        <a class="btn" id="openMap" href="https://www.openstreetmap.org/#map=14/39.6545/66.9750" target="_blank" rel="noopener">Открыть карту <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="map" id="map" role="region" aria-label="Карта отелей Afsun в Самарканде"></div>
+      <ul class="hlist" id="hotelList"></ul>
+    </div>
+  </section>
+
+  <section class="sec svc" id="services" aria-labelledby="svc-title">
+    <div class="svc__deco ph"><img src="img/dome.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+    <div class="wrap split">
+      <div class="rv">
+        <p class="kicker">Услуги и сервис</p>
+        <h2 id="svc-title">Всё для вашего удобства</h2>
+      </div>
+      <div class="tiles rv">
+        <div class="tile"><i data-lucide="wifi"></i>Wi-Fi</div>
+        <div class="tile"><i data-lucide="car"></i>Парковка</div>
+        <div class="tile"><i data-lucide="air-vent"></i>Кондиционер</div>
+        <div class="tile"><i data-lucide="car-taxi-front"></i>Трансфер</div>
+        <div class="tile"><i data-lucide="landmark"></i>Экскурсии</div>
+        <div class="tile"><i data-lucide="washing-machine"></i>Прачечная</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews" aria-labelledby="rev-title">
+    <div class="wrap rev">
+      <div class="rv">
+        <p class="kicker">Отзывы гостей</p>
+        <h2 id="rev-title">Что говорят наши гости</h2>
+        <p class="lead" style="margin-bottom:18px">Реальные отзывы о пребывании в Afsun Hotels Group</p>
+        <a class="btn" href="#reviews">Читать все отзывы <i data-lucide="arrow-right"></i></a>
+      </div>
+      <button class="arrow" type="button" data-dir="-1" aria-label="Предыдущие отзывы"><i data-lucide="arrow-left"></i></button>
+      <div>
+        <div class="rev__track" id="revTrack">
+          <article class="rcv"><div class="rcv__head"><span class="ava">AS</span><div><b>Anna Smith</b><small>США</small></div></div><div class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><p>Отличный отель! Уютные номера, вкусный завтрак и внимательный персонал.</p><span class="rcv__src">Google</span></article>
+          <article class="rcv"><div class="rcv__head"><span class="ava">MY</span><div><b>Mehmet Yilmaz</b><small>Турция</small></div></div><div class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><p>Прекрасное расположение и сервис. Обязательно вернусь!</p><span class="rcv__src">Booking.com</span></article>
+          <article class="rcv"><div class="rcv__head"><span class="ava">ИП</span><div><b>Ирина Петрова</b><small>Россия</small></div></div><div class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><p>Очень понравилось пребывание в Самарканде!</p><span class="rcv__src">Google</span></article>
+        </div>
+        <p class="sample">Образец из макета: перед запуском заменим на реальные отзывы гостей со ссылкой на Google и Booking.</p>
+      </div>
+      <button class="arrow" type="button" data-dir="1" aria-label="Следующие отзывы"><i data-lucide="arrow-right"></i></button>
+    </div>
+  </section>
+
+  <section class="sec" id="terms" aria-labelledby="terms-title">
+    <div class="wrap">
+      <div class="terms rv">
+        <div class="terms__img"><img src="img/arch.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+        <span class="terms__ic"><i data-lucide="file-check-2"></i></span>
+        <div style="position:relative;z-index:1">
+          <h2 id="terms-title">Условия проживания</h2>
+          <p>Бесплатная отмена бронирования до 18:00 дня заезда. Гибкие условия для вашего спокойствия.</p>
+        </div>
+        <a class="btn btn--white" href="#faq">Подробнее <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="faq" aria-labelledby="faq-title">
+    <div class="faq__deco ph"><img src="img/dome.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+    <div class="wrap split">
+      <div class="rv">
+        <p class="kicker">FAQ</p>
+        <h2 id="faq-title">Часто задаваемые вопросы</h2>
+        <p class="lead" style="margin-bottom:18px">Найдите ответы на интересующие вас вопросы</p>
+        <a class="btn" href="#faq">Все вопросы <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="qa rv">
+        <details><summary>Как отменить бронирование? <i data-lucide="plus"></i></summary><p>Бронь можно отменить бесплатно до 18:00 дня заезда. Напишите или позвоните администратору отеля.</p></details>
+        <details><summary>Во сколько начинается заселение? <i data-lucide="plus"></i></summary><p>Время заезда и выезда уточняется у отеля.</p></details>
+        <details><summary>Предоставляется ли трансфер? <i data-lucide="plus"></i></summary><p>Да, трансфер есть в списке наших услуг. Условия и стоимость уточняйте у администратора.</p></details>
+        <details><summary>Можно ли разместиться с детьми? <i data-lucide="plus"></i></summary><p>Да. Для семей с детьми есть семейные номера.</p></details>
+      </div>
+    </div>
+  </section>
