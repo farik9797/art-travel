@@ -1,0 +1,13 @@
+# файл страницы        ширина  исходник из Flow
+img/hotel-1.jpg         1000    ../assets-src/flow/Boutique_hotel_exterior_facade_f7b2e818_2K.jpg
+img/hotel-2.jpg         1000    ../assets-src/flow/Boutique_hotel_exterior_facade_6573c217_2K.jpg
+img/hotel-3.jpg         1000    ../assets-src/flow/Boutique_hotel_facade_exterior_4e1b1265_2K.jpg
+img/hotel-4.jpg         1000    ../assets-src/flow/Boutique_hotel_exterior_facade_32beb434_2K.jpg
+img/room-standard.jpg   1000    ../assets-src/flow/Hotel_room_interior_design_e3546094_2K.jpg
+img/room-superior.jpg   1000    ../assets-src/flow/Hotel_room_interior_design_70ff128a_2K.jpg
+img/room-family.jpg     1000    ../assets-src/flow/Hotel_room_with_four_beds_26b3a035_2K.jpg
+img/room-suite.jpg      1000    ../assets-src/flow/Hotel_room_interior_design_60bab747_2K.jpg
+video/hero.mp4          1920    ../assets-src/flow/Drone_approaching_central_madrasa_56eeba9c.mp4
+img/breakfast.jpg       1600    ../assets-src/flow/Breakfast_table_with_food_d7d038de_2K (1).jpg
+img/arch.jpg            700     ../assets-src/flow/Close-up_of_majolica_mosaic_arch_1503aa1f_2K.jpg
+# img/dome.jpg — купола из Flow нет; вырезан из Регистана: ffmpeg -i <Registan> -vf crop=900:1200:1700:200,scale=640:-2 img/dome.jpg
